@@ -1,0 +1,137 @@
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-wrapper {
+    width: 350px;
+    min-height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.form-wrapper p {
+    margin-bottom: 20px;
+    color: grey;
+}
+
+.group1 {
+    
+    position: relative;
+}
+
+.group2 {
+    position: relative;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  input {
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+  input:focus {
+    outline: none;
+  }
+
+  label {
+    color: #999;
+    font-size: 18px;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 15px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+
+  #first-error {
+    position: absolute;
+    display: none;
+    padding-left: 10px;
+    color: rgb(173, 6, 6);
+  }
+
+  #second-error {
+    position: absolute;
+    display: none;
+    padding-left: 10px;
+    color: rgb(173, 6, 6);
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label {
+    top: -15px;
+    font-size: 14px;
+    color: #5264AE;
+  }
+  
+
+  .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .bar:before, .bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  .bar:before {
+    left: 50%;
+  }
+  .bar:after {
+    right: 50%;
+  }
+  
+  input:focus ~ .bar:before,
+  input:focus ~ .bar:after {
+    width: 50%;
+  }
+
+.operation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.operation select {
+    width: 50px;
+    outline: none;
+}
+
+.result-wrapper {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#btn-submit {
+    display: block;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    background: #5264AE;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+#btn-submit:hover {
+  background: #5a70c9;
+}
